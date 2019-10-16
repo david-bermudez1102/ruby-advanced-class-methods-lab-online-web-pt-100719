@@ -43,6 +43,13 @@ class Song
     }
   end
 
+  def self.new_from_filename(name)
+    song_format = name.split("-").strip
+    song_format.each {
+      
+    }
+  end
+
   def self.destroy_all
     @@all = []
   end
