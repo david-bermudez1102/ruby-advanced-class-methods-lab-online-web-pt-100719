@@ -51,6 +51,7 @@ class Song
         song.name = song_attribute.split(".")[0]
       else
         song.artist_name = song_attribute
+      end
     }
   end
 
