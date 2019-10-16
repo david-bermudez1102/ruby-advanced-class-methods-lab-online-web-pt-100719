@@ -66,6 +66,7 @@ class Song
         song.artist_name = song_attribute.strip
       end
     }
+    self.all << song
     song
   end
 
