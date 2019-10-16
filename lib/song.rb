@@ -46,7 +46,7 @@ class Song
   def self.new_from_filename(name)
     song_format = name.split("-").strip
     song_format.each {
-      
+
     }
   end
 
