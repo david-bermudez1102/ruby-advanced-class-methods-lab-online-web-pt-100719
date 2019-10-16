@@ -44,9 +44,13 @@ class Song
   end
 
   def self.new_from_filename(name)
+    song = self.new
     song_format = name.split("-").strip
-    song_format.each {
-
+    song_format.each { |song_attribute|
+      if(song_attribute.include?("."))
+        song.name = song_attribute.split(".")[0]
+      else
+        song.artist_name = song_attribute
     }
   end
 
