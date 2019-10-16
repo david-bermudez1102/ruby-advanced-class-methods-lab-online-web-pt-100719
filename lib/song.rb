@@ -50,7 +50,7 @@ class Song
       if(song_attribute.strip.include?("."))
         song.name = song_attribute.strip.split(".")[0]
       else
-        song.artist_name = song_attribute.stip
+        song.artist_name = song_attribute.strip
       end
     }
   end
