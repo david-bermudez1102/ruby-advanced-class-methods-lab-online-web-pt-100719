@@ -56,6 +56,19 @@ class Song
     song
   end
 
+  def self.create_from_filename(name)
+    song = self.new
+    song_format = name.split("-")
+    song_format.each { |song_attribute|
+      if(song_attribute.strip.include?("."))
+        song.name = song_attribute.strip.split(".")[0]
+      else
+        song.artist_name = song_attribute.strip
+      end
+    }
+    song
+  end
+  
   def self.destroy_all
     @@all = []
   end
