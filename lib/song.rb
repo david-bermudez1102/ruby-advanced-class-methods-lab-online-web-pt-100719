@@ -48,9 +48,9 @@ class Song
     song_format = name.split("-")
     song_format.each { |song_attribute|
       if(song_attribute.strip.include?("."))
-        song.name = song_attribute.split(".")[0]
+        song.name = song_attribute.strip.split(".")[0]
       else
-        song.artist_name = song_attribute
+        song.artist_name = song_attribute.stip
       end
     }
   end
